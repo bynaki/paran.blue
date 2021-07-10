@@ -1,0 +1,127 @@
+---
+title: "Ava :: Debugging tests with Visual Studio Code"
+date: 2021-07-07T17:32:43+09:00
+draft: false
+# weight: 1
+# aliases: ["/first"]
+tags: ["ava", "debug"]
+author: "bynaki"
+# author: ["Me", "You"] # multiple authors
+showToc: true
+TocOpen: false
+hidemeta: false
+comments: false
+# description: "Debugging tests with Visual Studio Code."
+canonicalURL: "https://github.com/avajs/ava/blob/main/docs/recipes/debugging-with-vscode.md"
+disableHLJS: true # to disable highlightjs
+disableShare: false
+disableHLJS: false
+hideSummary: false
+searchHidden: false
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+cover:
+    image: "<image path/url>" # image path/url
+    alt: "<alt text>" # alt text
+    caption: "<text>" # display caption under cover
+    relative: false # when using page bundles set this to true
+    hidden: true # only hide on current single page
+editPost:
+    URL: "https://github.com/<path_to_repo>/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+---
+
+# Debugging tests with Visual Studio Code
+
+You can debug your tests using [Visual Studio Code](https://code.visualstudio.com/).
+
+## Debugging with the debug terminal
+
+You can use VS Code's “JavaScript Debug Terminal” to automatically debug AVA run on the command-line.
+
+1. From the Command Palette (<kbd>F1</kbd> or <kbd>command + shift + p</kbd> / <kbd>control + shift + p</kbd>), run `Debug: Create JavaScript Debug Terminal`
+2. Run `npx ava` in the terminal
+
+## Creating a launch configuration
+
+Alternatively you can create a launch configuration, which makes it easier to debug individual test files.
+
+1. Open a workspace for your project.
+1. In the sidebar click the *Debug* handle.
+1. Create a `launch.json` file.
+1. Select the Node.js environment.
+1. Add following to the `configurations` array and save changes:
+
+  ```json
+  {
+    "type": "node",
+    "request": "launch",
+    "name": "Debug AVA test file",
+    "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ava",
+    "runtimeArgs": [
+      "${file}"
+    ],
+    "outputCapture": "std",
+    "skipFiles": [
+      "<node_internals>/**/*.js"
+    ]
+  }
+  ```
+
+### Using the debugger
+
+Open the file(s) you want to debug. You can set breakpoints or use the `debugger` keyword.
+
+Now, *with a test file open*, from the *Debug* menu run the *Debug AVA test file* configuration.
+
+### Debugging precompiled tests
+
+If you compile your test files into a different directory, and run the tests *from* that directory, the above configuration won't work.
+
+Assuming the names of your test files are unique you could try the following configuration instead. This assumes the compile output is written to the `build` directory. Adjust as appropriate:
+
+
+```json
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Debug AVA test file",
+  "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ava",
+  "runtimeArgs": [
+    "build/**/${fileBasenameNoExtension}.*"
+  ],
+  "outputCapture": "std",
+  "skipFiles": [
+    "<node_internals>/**/*.js"
+  ]
+}
+```
+
+## Serial debugging
+
+By default AVA runs tests concurrently. This may complicate debugging. Instead make sure AVA runs only one test at a time.
+
+*Note that, if your tests aren't properly isolated, certain test failures may not appear when running the tests serially.*
+
+If you use the debug terminal make sure to invoke AVA with `npx ava --serial`.
+
+Or, if you're using a launch configuration, add the `--serial` argument:
+
+```json
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Debug AVA test file",
+  "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ava",
+  "runtimeArgs": [
+    "--serial",
+    "${file}"
+  ],
+  "outputCapture": "std",
+  "skipFiles": [
+    "<node_internals>/**/*.js"
+  ]
+}
+```
