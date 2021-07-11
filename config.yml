@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/"
+baseURL: "https://bynaki.github.io"
 title: Paran.Blue
 paginate: 5
 theme: PaperMod
@@ -95,7 +95,7 @@ params:
         hiddenInSingle: true # hide on single page
 
     editPost:
-        URL: "https://github.com/bynaki/paran.blue/content"
+        URL: "https://github.com/bynaki/paran.blue/blob/main/content"
         Text: "Edit" # edit text
         appendFilePath: true # to append file path to Edit link
 
