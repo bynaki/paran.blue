@@ -5,6 +5,7 @@ draft: false
 # weight: 1
 # aliases: ["/first"]
 tags: ["ava", "debug"]
+categories: ["Ava"]
 author: "bynaki"
 # author: ["Me", "You"] # multiple authors
 showToc: true
@@ -33,7 +34,7 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-# Debugging tests with Visual Studio Code
+Debugging tests with Visual Studio Code
 
 You can debug your tests using [Visual Studio Code](https://code.visualstudio.com/).
 

@@ -4,15 +4,15 @@ date: {{ .Date }}
 draft: false
 # weight: 1
 # aliases: ["/first"]
-# tags: ["first"]
-# categories: ["Test"]
+# tags: [""]
+# categories: [""]
 author: "bynaki"
 showToc: true
 TocOpen: false
 hidemeta: false
 comments: false
 # description: "Desc Text."
-# canonicalURL: "https://canonical.url/to/page"
+# canonicalURL: ""
 disableHLJS: false # to disable highlightjs
 disableShare: true
 hideSummary: false

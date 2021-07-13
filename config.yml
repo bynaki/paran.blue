@@ -17,7 +17,7 @@ minify:
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: Paran.Blue
-    description: "My blog."
+    description: "My notes."
     keywords: [Blog, Portfolio]
     author: bynaki
     # author: ["Me", "You"] # multiple authors
@@ -71,7 +71,7 @@ params:
     # home-info mode
     homeInfoParams:
         Title: "Paran.Blue"
-        Content: Welcome to my blog
+        Content: Welcome to my Notes
 
     socialIcons:
         - name: twitter
