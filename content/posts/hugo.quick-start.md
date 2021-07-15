@@ -176,3 +176,6 @@ Output will be in `./public/` directory by default (`-d/--destination` flag to c
 ## See Also
 
 - https://gohugo.io/getting-started/quick-start/
+- https://ialy1595.github.io/post/blog-construct-1/
+- https://golangkorea.github.io/series/hugo-introduction/
+- [PaperMod Theme](https://themes.gohugo.io/themes/hugo-papermod/)
