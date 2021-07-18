@@ -5,7 +5,7 @@ draft: false
 # weight: 1
 # aliases: ["/first"]
 tags: ["hammerspoon"]
-categories: ["hammerspoon"]
+categories: ["Hammerspoon"]
 author: "bynaki"
 showToc: true
 TocOpen: false

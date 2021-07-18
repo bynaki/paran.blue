@@ -4,8 +4,8 @@ date: 2021-07-15T23:38:46+09:00
 draft: false
 # weight: 1
 # aliases: ["/first"]
-tags: ["css", "font-face", "WebFont"]
-categories: ["css"]
+tags: ["css", "font-face", "webfont"]
+categories: ["CSS"]
 author: "bynaki"
 showToc: true
 TocOpen: false
@@ -31,6 +31,8 @@ editPost:
     Text: "Edit" # edit text
     appendFilePath: true # to append file path to Edit link
 ---
+
+
 
 웹 폰트 또한 `font-family` 속성을 사용하지만, `@font-face` 지시어(directive)라는 CSS 명령어를 사용해서 웹 브라우저에게 해당 서체를 다운로드할 것을 알리면서 사용할 수 있습니다.
 
