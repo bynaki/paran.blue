@@ -159,6 +159,8 @@ To connect to a disk file database, instead of passing the `':memory:'` string, 
 
 For example, to connect to the `chinook` database file stored in the `db` folder, you use the following statement:
 
+`chinook` 데이터베이스 파일은 [여기](https://www.sqlitetutorial.net/sqlite-sample-database/)에서 받자.
+
 ```js
 let db = new sqlite3.Database('./db/chinook.db', (err) => {
   if (err) {
