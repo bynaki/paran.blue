@@ -5,7 +5,7 @@ draft: false
 # weight: 1
 # aliases: ["/first"]
 tags: ["node", "npm"]
-categories: ["Node.js"]
+categories: ["Node"]
 author: "bynaki"
 showToc: true
 TocOpen: false
