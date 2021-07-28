@@ -32,19 +32,22 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-오래된 프로젝트의 기본 branch가 `master`라면 `main`으로 바꾸어 보자.
 
-```bash
-$ git checkout master # master branch로 이동
-$ git branch -m master main # 로컬에서 master 이름을 main으로 변경
-$ git fetch # 서버(Github)에서 최신 커밋을 가져옴
-$ git branch --unset-upstream # origin/master와 연결 제거
-$ git branch -u origin/main # origin/main과 연결
-$ git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main # Default branch를 origin/main으로 업데이트
+
+오래된 프로젝트의 기본 branch 이름이  `master`라면 `main`으로 변경하자.
+
+`github` 에서 `Settings` > `Branches` > `Default branch` 에서 `master` 를 `main` 으로 변경한 후 로컬에서 다음을 실행한다.
+
+```shell
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
 ```
 
 `git int` 할때 기본 branch를 `main`으로 하기 위한 config 설정.
 
-```bash
+```shell
 $ git config --global init.defaultBranch main
 ```
+
