@@ -34,7 +34,7 @@ editPost:
 
 
 
-# for await...of
+## for await...of
 
 **`for await...of` 구문**은 보통 비동기에 대응하는 열거자를 나열할 때 쓰이지만, [`String`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String), [`Array`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array), `Array` 같은 객체 (e.g., [`arguments`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/arguments) or [`NodeList`](https://developer.mozilla.org/en-US/docs/Web/API/NodeList)), [`TypedArray`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray), `Map`, [`Set`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Set) 같은 동기적으로 열거 가능한 객체 또한 가능하며, 사용자가 직접 정의한 동기 또는 비동기 객체도 나열할 수 있도록 해준다. 일반적인 **`for ...of`** 문과 마찬가지로 열거자 심볼이 정의한 속성을 실행하게 되어 열거한 값을 변수로 받아 처리한다.
 
