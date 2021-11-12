@@ -1,5 +1,5 @@
 ---
-title: "Js.optional"
+title: "Js :: Optional chaining (?. 연산자)"
 date: 2021-11-13T00:12:53+09:00
 draft: false
 # weight: 1
